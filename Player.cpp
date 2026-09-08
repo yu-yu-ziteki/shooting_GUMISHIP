@@ -37,11 +37,14 @@ void Player::Update()
 		transform_.rotate_.z = +20.0f;
 
 	}
-	if (Input::IsKey(DIK_LEFT) || Input::IsKey(DIK_D))
+	else if (Input::IsKey(DIK_LEFT) || Input::IsKey(DIK_D))
 	{
 		transform_.position_.x += 0.2f;
 		transform_.rotate_.z = -20.0f;
 
+	}
+	else {
+		transform_.rotate_.z = 0.0f;
 	}
 
 	if (Input::IsKeyDown(DIK_SPACE))
